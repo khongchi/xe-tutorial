@@ -19,7 +19,9 @@ XML 쿼리는 XML  쿼리 언어(XML Query Language)로 작성되며, 하나의 
 
 
 	예) ./widgets/content/queries/
-	
+
+XML 쿼리 작성법 자세히 보기	
+
 * [select 쿼리 - 기본](select-clause-basic.md)
 * [select 쿼리 - 고급](select-clause-basic.md)
 * [insert 쿼리](insert-update-delete-clause.md)
