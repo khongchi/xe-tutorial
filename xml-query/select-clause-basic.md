@@ -187,7 +187,7 @@ SELECT * FROM member WHERE user_id = 'khongchi';
 
 `var` 속성에 바인딩된 변수의 값이 지정된 `filter`에 충족하지 못하면 쿼리는 실행되지 않습니다.
 
-#### maxlength, minlength
+#### maxlength, minlength 속성
 
 `condition` 요소의 `maxlength`, `minlength` 속성을 사용하여 바인딩된 변수의 최소/최대 길이를 필터링할 수 있습니다.
 
