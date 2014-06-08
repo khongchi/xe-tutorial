@@ -2,7 +2,7 @@
 
 XML 쿼리의 최상위 요소는 `<query></query>`입니다.
 
-`query`요소는 속성(attribute)으로 id와 action를 가집니다. 각 속성은 쿼리의 id와 쿼리의 타입(select, insert, update, delete)을 나타냅니다.
+`query` 요소는 속성(attribute)으로 `id`와 `action`을 가집니다. 각 속성은 쿼리의 id와 쿼리의 타입(select, insert, update, delete)을 나타냅니다.
 
 
 ### select절
@@ -24,7 +24,7 @@ member 테이블의 모든 row를 조회할 수 있습니다.
 SELECT * FROM member;
 ```
 
-column 요소를 사용하여 특정 컬럼만 조회할 수 있습니다.
+`column` 요소를 사용하여 특정 컬럼만 조회할 수 있습니다.
 
 ```
 <query id="getMember" action="select">
@@ -44,7 +44,7 @@ SELECT user_id, nick_name FROM member;
 
 ### group by절
 
-group 요소를 사용하여 group by절을 작성할 수 있습니다.
+`group` 요소를 사용하여 group by절을 작성할 수 있습니다.
 
 ```
 <query id="getMember" action="select">
@@ -127,13 +127,13 @@ SELECT * FROM member WHERE user_id = 'khongchi';
 #### default 속성
 
 
-`var`속성이 없거나 `var`속성에 변수가 할당되지 않았을 경우 `default` 속성을 사용하여 기본값을 지정할 수 있습니다.
+`var` 속성이 없거나 `var`속성에 변수가 바인딩되지 않았을 경우 `default` 속성을 사용하여 기본값을 지정할 수 있습니다.
 
 
 
 ### 다중 where절
 
-조건이 두개 이상일 경우 `pipe`속성 사용할 수 있습니다. `pipe`속성은 and나 or를 지정할 수 있습니다.
+조건이 두개 이상일 경우 `pipe` 속성 사용할 수 있습니다. `pipe`속성은 'and'나 'or'를 지정할 수 있습니다.
 
 ```
 <query id="getMemberInfo" action="select">
@@ -156,7 +156,7 @@ SELECT * FROM member WHERE user_id = ':user_id' and is_admin = 'Y';
 
 ### 중첩 where절
 
-중첩된 조건을 가진 where절의 경우 `group`요소를 사용할 수 있습니다.
+중첩된 조건을 가진 where절의 경우 `group` 요소를 사용할 수 있습니다.
 
 ```
 <query id="getMemberList" action="select">
