@@ -19,7 +19,13 @@ XML 쿼리는 XML  쿼리 언어(XML Query Language)로 작성되며, 하나의 
 
 
 	예) ./widgets/content/queries/
-
+	
+* [select 쿼리 - 기본](select-clause-basic.md)
+* [select 쿼리 - 고급](select-clause-basic.md)
+* [insert 쿼리](insert-update-delete-clause.md)
+* [update 쿼리](insert-update-delete-clause.md)
+* [delete 쿼리](insert-update-delete-clause.md)
+	
 ### XML 쿼리 ID
 
 XML  쿼리는 각각 쿼리 ID를 가집니다. 이 쿼리 ID는 쿼리 XML파일의 파일명이어야 하며, XML 쿼리문 내에도 명시됩니다.
@@ -72,4 +78,5 @@ if($output->toBool())
     echo $member->nickname; 
 }
 ```
+
 
