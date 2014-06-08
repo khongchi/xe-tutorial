@@ -20,7 +20,7 @@ XE에서 DB에 질의를 하기 위해서는 사용되는 DB테이블의 스키�
 아래는 XML 스키마 언어를 이용하여 XE 회원테이블(member table)의 스키마를 정의한 예입니다.
 
 ```
-// modules/member/schemas/member.xml
+<!-- modules/member/schemas/member.xml -->
 
 <table name="member">
     <column name="member_srl" type="number" size="11" notnull="notnull" primary_key="primary_key" />
@@ -49,16 +49,17 @@ XE에서 DB에 질의를 하기 위해서는 사용되는 DB테이블의 스키�
     <column name="list_order" type="number" size="11" notnull="notnull" index="idx_list_order" />
 </table>
 ```
-XE에서는 DB질의시 이 스키마를 항상 참조합니다.
+
+XE에서는 DB질의시 대상이 되는 테이블의 스키마 정보를 항상 참조합니다. 따라서 XE에서는 스키마 정보가 등록되지 않은 테이블은 사용될 수 없습니다.
 
 > Note: XML 스키마 언어의 자세한 사용법은 차후 제공될 예정입니다.
 
 ### XML 쿼리문 정의
 
-아래는 XML 쿼리문의 한 예로서 XE의 회원테이블에서 회원을 조회하는 쿼리입니다.
+XML 쿼리문의 한 예입니다. XE의 회원테이블에서 회원을 조회하는 쿼리입니다.
 
 ```
-// modules/member/queries/getMemberInfo.xml
+<!-- modules/member/queries/getMemberInfo.xml -->
 
 <query id="getMemberInfo" action="select">
     <tables>
@@ -73,13 +74,13 @@ XE에서는 DB질의시 이 스키마를 항상 참조합니다.
 </query>
 ```
 
-XML 쿼리 언어의 자세한 사용법은 [다음장](xml-query)에서 설명합니다.
+XML 쿼리 언어의 자세한 사용법은 [다음장](xml-query/xml-query.md)에서 설명합니다.
 
 ### XML 쿼리문의 실행
 
-등록해 놓은 XML 쿼리문은 XE의 코드상에서 필요할 때마다 executeQuery(), executeQueryArray()함수를 이용하여 질의할 수 있습니다.
+등록되어 있는 XML 쿼리문은 XE의 PHP 코드에서 필요할 때마다 질의할 수 있습니다. `executeQuery()`, `executeQueryArray()`함수가 사용됩니다.
 
-아래는 `user_id`가 'admin'인 회원을 검색하는 방법입니다.
+아래는 `user_id`가 'admin'인 회원을 검색하는 코드입니다.
 
 ```
 $arg = new stdClass();
