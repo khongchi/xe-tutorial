@@ -47,9 +47,13 @@ XML  쿼리는 각각 쿼리 ID를 가집니다. 이 쿼리 ID는 쿼리 XML파�
 
 등록해 놓은 XML 쿼리문은 XE의 PHP 코드에서 필요할 때마다 executeQuery(), executeQueryArray()함수를 이용하여 질의할 수 있습니다.
 
-executeQuery() 함수는 ./classes/db/DB.classs.php에 있는 DB::executeQuery() 함수의 별칭(alias)입니다. 
-이 함수는 실제 DB 데이터를 조작하고 사용된 DB에 따라 XML 쿼리가 네이티브 SQL로 파싱된 후에 
-결과를 수신합니다
+```
+function executeQuery($xml_query_name, $args = null); 
+```
+
+executeQuery() 함수는 ./classes/db/DB.classs.php에 있는 DB::executeQuery() 함수의 별칭(alias)입니다.
+
+이 함수는 실제 DB 데이터를 조작하고 사용된 DB에 따라 XML 쿼리가 네이티브 SQL로 파싱된 후에 결과를 수신합니다
 
 executeQueryArray() 함수는 결과가 항상 array로 리턴되는 것 이외에는 executeQuery()함수와 동일합니다.
 
