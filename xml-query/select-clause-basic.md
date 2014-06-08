@@ -1,8 +1,8 @@
 ## select 쿼리 - 기본
 
-XE의 모든 XML 쿼리는 최상위 요소가 `<query></query>`입니다.
+XML 쿼리의 최상위 요소는 `<query></query>`입니다.
 
-`query`요소의 속성(attribute)로 id와 action이 지정되며. 각각 쿼리의 id와 쿼리타입(select, insert, update, delete)이 지정됩니다.
+`query`요소는 속성(attribute)으로 id와 action를 가집니다. 각 속성은 쿼리의 id와 쿼리의 타입(select, insert, update, delete)을 나타냅니다.
 
 
 ### select절
