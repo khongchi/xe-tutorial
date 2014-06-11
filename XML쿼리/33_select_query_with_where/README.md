@@ -4,7 +4,7 @@ TODO: 목차..
 
 ## select 쿼리 - where절
 
-where절은 `condition` 요소를 사용하여 작성할 수 있습니다. where절은 select, update, delete 쿼리에서 모두 동일하게 사용됩니다.
+where절은 `<condition>` 요소를 사용하여 작성할 수 있습니다. where절은 select, update, delete 쿼리에서 모두 동일하게 사용됩니다.
 
 ```
 <query id="getMemberInfo" action="select">
@@ -27,27 +27,28 @@ SELECT * FROM member WHERE user_id = ':user_id';
 
 ### operation 속성
 
-`condition` 요소의 `operation` 속성은  조건 연산자 지정합니다. 아래의 연산자를 가질 수 있습니다.
+`<condition>` 요소의 `operation` 속성은 조건 연산자 지정합니다. 아래의 연산자를 가질 수 있습니다.
 
-
-* equal : column = (var|default)
-* more : column >= (var|default)
-* excess : column > (var|default)
-* less : column <= (var|default)
-* below : column < (var|default)
-* notequal : column != (var|default)
-* notnull : column is not null
-* null : column is null
-* like_prefix : column like 'var|default%'
-* like_tail : column like '%var|default'
-* like : column like '%var|default%'
-* in : column in (var|default)
-* notin : column not in (var|default) 
+연산자 | 의미
+-----|----
+equal | column = (var or default)
+more | column >= (var or default)
+excess | column > (var or default)
+less | column <= (var or default)
+below | column < (var or default)
+notequal | column != (var or default)
+notnull | column is not null
+null | column is null
+like_prefix | column like 'var or default%'
+like_tail | column like '%var or default'
+like | column like '%var or default%'
+in | column in (var or default)
+notin | column not in (var or default) 
 
 
 ### var 속성
 
-`condition` 요소의 `var` 속성을 사용하여 쿼리에 변수를 할당할 수 있습니다.
+`<condition>` 요소의 `var` 속성을 사용하여 쿼리에 변수를 바인딩 할 수 있습니다.
 
 executeQeury()함수를 실행할 때, 두번째 파라메터에 할당한 변수의 값이 바인딩됩니다.
 
@@ -64,19 +65,19 @@ SELECT * FROM member WHERE user_id = 'khongchi';
 
 ### default 속성
 
-`condition` 요소에 `var` 속성이 없거나 `var`속성에 변수가 바인딩되지 않았을 경우 `default` 속성을 사용하여 기본값을 지정할 수 있습니다.
+`<condition>` 요소에 `var` 속성이 없거나 `var`속성에 변수가 바인딩되지 않았을 경우 `default` 속성을 사용하여 기본값을 지정할 수 있습니다.
 
 
 ### notnull 속성
 
-`condition` 요소의 `notnull`속성을 이용하여 사용자가 `var` 속성에 변수 바인딩을 빼트리지 않도록 차단할 수 있습니다.
+`<condition>` 요소의 `notnull`속성을 이용하여 사용자가 `var` 속성에 변수 바인딩을 빼트리지 않도록 차단할 수 있습니다.
 
 `notnull=notnull`로 지정하면 됩니다. 단, `notnull=notnull`이 지정되어 있고 `var` 속성에 변수가 바인딩 되지 않아도 `default` 속성이 지정되어 있을 경우에는 쿼리가 정상적으로 실행됩니다. 이럴 경우 default 값을 사용하게 됩니다.
 
 
 ### filter 속성
 
-`condition` 요소의 `filter`속성을 이용하면 `var`속성에 바인딩된 변수의 값을 실제 DB에 질의하기 전에 필터링 할 수 있습니다.
+`<condition>` 요소의 `filter`속성을 이용하면 `var`속성에 바인딩된 변수의 값을 실제 DB에 질의하기 전에 필터링 할 수 있습니다.
 
 ```
 <query id="getMemberInfo" action="select">
@@ -105,15 +106,15 @@ SELECT * FROM member WHERE user_id = 'khongchi';
 
 ### maxlength, minlength 속성
 
-`condition` 요소의 `maxlength`, `minlength` 속성을 사용하여 바인딩된 변수의 최소/최대 길이를 필터링할 수 있습니다.
+`<condition>` 요소의 `maxlength`, `minlength` 속성을 사용하여 바인딩된 변수의 최소/최대 길이를 필터링할 수 있습니다.
 
 
 
 
 
-## 다중 where절
+## pipe 속성 - 다중 where절
 
-조건이 두개 이상일 경우 `pipe` 속성 사용할 수 있습니다. `pipe`속성은 'and'나 'or'를 지정할 수 있습니다.
+조건이 두개 이상일 경우 `pipe` 속성 사용합니다. `pipe`속성은 'and'나 'or'를 지정할 수 있습니다.
 
 ```
 <query id="getMemberInfo" action="select">
@@ -136,7 +137,7 @@ SELECT * FROM member WHERE user_id = ':user_id' and is_admin = 'Y';
 
 ## 중첩 where절
 
-중첩된 조건을 가진 where절의 경우 `group` 요소를 사용할 수 있습니다.
+중첩된 조건을 가진 where절의 경우 `<group>` 요소를 사용할 수 있습니다.
 
 ```
 <query id="getMemberList" action="select">
@@ -162,5 +163,5 @@ SELECT * FROM member WHERE is_admin = ':is_admin' and (user_id = ':s_user_id' or
 ```
 
 
-> Note: group by에서 사용했던 `group`과 동일한 명칭을 사용합니다. 주의하세요.
+> Note: group by에서 사용했던 `<group>` 요소와 동일한 명칭을 사용합니다. 주의하세요.
 
