@@ -120,7 +120,7 @@ $DB->addIndex("comments", "idx_voted_count", array("voted_count"));
 $DB->addIndex("documents", "idx_module_status", array("module_srl","status"));
 ```
 
-### 인덱스 삭제
+### 인덱스 삭제하기
 
 ```
 DB::dropIndex($table_name, $index_name, $is_unique = false)
