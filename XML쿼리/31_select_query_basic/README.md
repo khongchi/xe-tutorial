@@ -21,14 +21,14 @@
 
 ## select 쿼리 - 기본
 
-XML 쿼리의 최상위 요소(element)는 `<query></query>`입니다.
+XML 쿼리의 최상위 요소(element)는 `<query>`입니다.
 
-`query` 요소는 속성(attribute)으로 `id`와 `action`을 가집니다. 각 속성은 쿼리의 id와 쿼리의 타입(select, insert, update, delete)을 나타냅니다.
+`<query>` 요소는 속성(attribute)으로 `id`와 `action`을 가집니다. 각 속성은 쿼리의 id와 쿼리의 타입(select, insert, update, delete)을 나타냅니다.
 
 
 ### select절
 
-member 테이블의 모든 row를 조회할 수 있습니다.
+`<table>`요소는 from절을 구성합니다. 테이블을 지정합니다.
 
 ```
 <query id="getMember" action="select">
@@ -45,7 +45,7 @@ member 테이블의 모든 row를 조회할 수 있습니다.
 SELECT * FROM member;
 ```
 
-`column` 요소를 사용하여 특정 컬럼만 조회할 수 있습니다.
+`<column>`요소를 사용하여 select절을 구성합니다. 특정 컬럼만 조회할 수 있습니다.
 
 ```
 <query id="getMember" action="select">
