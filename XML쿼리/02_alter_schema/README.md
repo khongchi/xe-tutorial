@@ -2,7 +2,7 @@
 #XE 데이터베이스
 
 
-목차...
+TODO: 목차...
 
 
 ## 테이블 변경하기 (Alter table)
@@ -18,6 +18,11 @@ XE에서는 테이블을 변경/삭제하기 위하여 DB 클래스를 사용합
 
 
 > Note: 테이블의 컬럼을 추가, 삭제할 때에는 해당 테이블의 XML 스키마도 동시에 변경해 주어야 합니다. XE는 DB질의(쿼리)를 실행시 XML스키마를 항상 참조합니다.
+
+---
+
+> Note: 테이블 변경은 모듈의 설치 및 업데이트/삭제 사이클과 깊이 연관되어 있습니다. [TODO:모듈 튜토리얼 링크]을 참고하세요.
+
 
 ### DB클래스 가져오기
 
@@ -69,7 +74,6 @@ DB::dropColumn($table_name, $column_name)
 
 ```
 // example
-
 
 if($DB->isColumnExists('documents', 'is_secret'))
 {
