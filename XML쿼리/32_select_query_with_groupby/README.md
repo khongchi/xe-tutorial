@@ -6,7 +6,7 @@ TODO: 목차..
 
 
 
-### group by절
+## select 쿼리 - group by절
 
 `<groups><group>` 요소를 사용하여 group by절을 작성할 수 있습니다.
 
