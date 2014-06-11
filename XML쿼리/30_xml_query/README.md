@@ -24,9 +24,9 @@ XML 쿼리 파일은 세가지 경로 중 한 곳에 저장될 수 있습니다.
 
 ### XML 쿼리 ID
 
-XML 쿼리는 각각 쿼리 ID를 가집니다. 이 쿼리 ID는 쿼리 XML파일의 파일명이어야 합니다.
+XML 쿼리는 각각 쿼리 ID를 가집니다. XML 쿼리 파일의 파일명은 쿼리의 ID와 동일해야 합니다.
 
-쿼리의 최상위 요소(element)는 `<query></query>`입니다. `id`속성에 쿼리의 ID가 명시되어야 합니다.
+쿼리의 최상위 요소(element)는 `<query></query>`입니다. `query` 요소의  `id`속성에 쿼리의 ID가 명시되어야 합니다.
 
 ```
 <!-- ./modules/member/queries/getMemberInfo.xml -->
@@ -45,4 +45,4 @@ XML 쿼리는 각각 쿼리 ID를 가집니다. 이 쿼리 ID는 쿼리 XML파�
 
 ```
 
-위 쿼리문은 ID가 `getMemberInfo`이며 `getMemberInfo.xml`에 저장됩니다.
+위 XML 쿼리는 ID가 `getMemberInfo`이며 `getMemberInfo.xml`에 저장됩니다.
