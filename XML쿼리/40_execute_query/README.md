@@ -24,7 +24,7 @@ if($output->toBool())
 
 ### executeQuery 함수 실행
 
-한번 작성하여 등록 된 XML 쿼리는 `executeQuery()`, `executeQueryArray()`함수를 사용하여 실행할 수 있습니다.
+작성된 XML 쿼리는 `executeQuery()`, `executeQueryArray()`함수를 사용하여 실행할 수 있습니다.
 
 
 ```
@@ -32,7 +32,6 @@ if($output->toBool())
 
 function executeQuery($query_id, $args = NULL, $arg_columns = NULL)	
 function executeQueryArray($query_id, $args = NULL, $arg_columns = NULL
-
 ```
 
 #### 첫번째 파라메터
@@ -50,7 +49,7 @@ XML쿼리는 애드온, 모듈, 위젯이 소유할 수 있습니다. 소유하�
 
 #### 두번째 파라메터
 
-두번째 파라메터는 쿼리에 바인딩 될 변수의 모음입니다.
+두번째 파라메터는 쿼리에 바인딩 될 변수를 담은 Object 객체입니다.
 
 ```
 /* ./modules/member/queries/getMemberInfo.xml */
@@ -67,7 +66,7 @@ XML쿼리는 애드온, 모듈, 위젯이 소유할 수 있습니다. 소유하�
     </conditions>
 </query>
 ```
-위 쿼리의 `user_id` 변수에  바인딩시키고 싶은 값('admin')이 있다면 아래와 같이 두번째 파라메터를 지정하세요.
+위 쿼리의 `user_id` 변수에  바인딩 할 값('admin')이 있다면 아래와 같이 두번째 파라메터를 지정하세요.
 
 ```
 $arg = new stdClass();
@@ -96,7 +95,7 @@ $output = executeQuery('member.getMemberInfo', $arg);
 	"data":{
 		.....
 	},
-	"page_navigation":{		// navigation을 사용한 쿼리일 경우
+	"page_navigation":{		// navigation을 사용한 쿼리일 경우 존재
 		"total_count":4181,
 		"total_page":210,
 		"cur_page":1,
