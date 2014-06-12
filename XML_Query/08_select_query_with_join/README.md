@@ -15,7 +15,7 @@
 - [INSERT 쿼리](10_insert_query/)
 - [UPDATE 쿼리](11_update_query/)
 - [DELETE 쿼리](12_delete_query/)
-- [쿼리 실행하기](13_execute_query/)
+- [XML 쿼리 실행하기](13_execute_query/)
 
 <!-- index end -->
 
