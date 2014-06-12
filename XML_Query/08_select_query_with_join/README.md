@@ -1,16 +1,15 @@
+# XML Query
 
-# XE 데이터베이스
+TODO: 목차...
 
-TODO: 목차..
-
-## select 쿼리 - join
+## SELECT 쿼리 - join
 
 XML 쿼리를 이용하여 left join(또는 left outer join), right join(또는 right outer join)을 사용할 수 있습니다.
 
 ```
 SELECT files.* 
-FROM xe_files as files 
-	left join xe_member as member on files.member_srl = member.member_srl
+FROM xe_files AS files 
+	left join xe_member AS member on files.member_srl = member.member_srl
 WHERE files.isvalid = 'Y';
 ```
 

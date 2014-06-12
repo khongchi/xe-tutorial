@@ -1,10 +1,10 @@
-# XE 데이터베이스
+# XML Query
 
-TODO: 목차..
+TODO: 목차...
 
-## select 쿼리 - where절
+## SELECT 쿼리 - WHERE절
 
-where절은 `<condition>` 요소를 사용하여 작성할 수 있습니다. where절은 select, update, delete 쿼리에서 모두 동일하게 사용됩니다.
+WHERE절은 `<condition>` 요소를 사용하여 작성할 수 있습니다. WHERE절은 SELECT, update, delete 쿼리에서 모두 동일하게 사용됩니다.
 
 ```
 <query id="getMemberInfo" action="select">
@@ -112,7 +112,7 @@ SELECT * FROM member WHERE user_id = 'khongchi';
 
 
 
-## pipe 속성 - 다중 where절
+## pipe 속성 - 다중 WHERE절
 
 조건이 두개 이상일 경우 `pipe` 속성 사용합니다. `pipe`속성은 'and'나 'or'를 지정할 수 있습니다.
 
@@ -135,9 +135,9 @@ SELECT * FROM member WHERE user_id = 'khongchi';
 SELECT * FROM member WHERE user_id = ':user_id' and is_admin = 'Y';
 ```
 
-## 중첩 where절
+## 중첩 WHERE절
 
-중첩된 조건을 가진 where절의 경우 `<group>` 요소를 사용할 수 있습니다.
+중첩된 조건을 가진 WHERE절의 경우 `<group>` 요소를 사용할 수 있습니다.
 
 ```
 <query id="getMemberList" action="select">

@@ -1,8 +1,6 @@
+# XML Query
 
-# XE 데이터베이스
-
-TODO: 목차..
-
+TODO: 목차...
 
 ## insert 쿼리
 
@@ -26,5 +24,5 @@ insert 쿼리는 `query` 요소의 `action` 속성을 'insert'로 지정합니�
 
 `table` 요소는 row를 삽입할 table명을 지정하고 `column`요소에는 value를 지정합니다.
 
-앞서 select 쿼리에서 보았던 `condition`요소의 속성들(`var`, `default`, `filter`, `notnull`, `minlength`, `maxlength`)을 동일하게 사용할 수 있습니다.
+앞서 SELECT 쿼리에서 보았던 `condition`요소의 속성들(`var`, `default`, `filter`, `notnull`, `minlength`, `maxlength`)을 동일하게 사용할 수 있습니다.
 

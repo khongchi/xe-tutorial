@@ -1,12 +1,8 @@
+# XML Query
 
-# XE 데이터베이스
+TODO: 목차...
 
-TODO: 목차..
-
-
-
-
-## select 쿼리 - group by절
+## SELECT 쿼리 - group by절
 
 `<group>` 요소를 사용하여 group by절을 작성할 수 있습니다.
 

@@ -1,9 +1,6 @@
-
-# XE 데이터베이스
-
+# XML Query
 
 TODO: 목차...
-
 
 ## 테이블 변경하기 (Alter table)
 

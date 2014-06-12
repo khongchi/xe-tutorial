@@ -1,7 +1,6 @@
+# XML Query
 
-# XE 데이터베이스
-
-TODO: 목차..
+TODO: 목차...
 
 ## delete 쿼리
 ```

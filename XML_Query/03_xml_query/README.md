@@ -1,4 +1,4 @@
-# XE 데이터베이스
+# XML Query
 
 TODO: 목차...
 

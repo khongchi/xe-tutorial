@@ -1,19 +1,17 @@
+# XML Query
 
-# XE 데이터베이스
+TODO: 목차...
 
-TODO: 목차..
-
-
-## select 쿼리 - 기본
+## SELECT 쿼리 - 기본
 
 XML 쿼리의 최상위 요소(element)는 `<query>`입니다.
 
 `<query>` 요소는 속성(attribute)으로 `id`와 `action`을 가집니다. 각 속성은 쿼리의 id와 쿼리의 타입(select, insert, update, delete)을 나타냅니다.
 
 
-### select절
+### SELECT절
 
-`<table>`요소는 from절을 구성합니다. 테이블을 지정합니다.
+`<table>`요소는 FROM절을 구성합니다. 테이블을 지정합니다.
 
 ```
 <query id="getMember" action="select">
@@ -30,7 +28,7 @@ XML 쿼리의 최상위 요소(element)는 `<query>`입니다.
 SELECT * FROM member;
 ```
 
-`<column>`요소를 사용하여 select절을 구성합니다. 특정 컬럼만 조회할 수 있습니다.
+`<column>`요소를 사용하여 SELECT절을 구성합니다. 특정 컬럼만 조회할 수 있습니다.
 
 ```
 <query id="getMember" action="select">
@@ -66,5 +64,5 @@ SELECT user_id, nick_name FROM member;
 ```
 
 ```
-SELECT m.user_id as uid, nick_name as nick FROM member as m;
+SELECT m.user_id AS uid, nick_name AS nick FROM member AS m;
 ```

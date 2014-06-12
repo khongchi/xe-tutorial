@@ -1,23 +1,22 @@
+# XML Query
 
-# XE 데이터베이스
+TODO: 목차...
 
-TODO: 목차..
-
-## select 쿼리 - 서브쿼리
+## SELECT 쿼리 - 서브쿼리
 
 XML 쿼리는 서브쿼리를 제공합니다.
 
-### select절에서 서브쿼리
+### SELECT절에서 서브쿼리
 
-select절에서 subquery를 사용할 수 있습니다.
+SELECT절에서 서브쿼리를 사용할 수 있습니다.
 
 ```
-select 	*, (select count(*) as "count" 
-			from "xe_documents" as "documents" 
-			where "documents"."user_id" = "member"."user_id" 
- 		) as "totaldocumentcount" 
- from "xe_member" as "member" 
- where "user_id" = 7
+SELECT 	*, (SELECT count(*) AS "count" 
+			FROM "xe_documents" AS "documents" 
+			WHERE "documents"."user_id" = "member"."user_id" 
+ 		) AS "totaldocumentcount" 
+ FROM "xe_member" AS "member" 
+ WHERE "user_id" = 7
  ```
  
 ```
@@ -47,15 +46,15 @@ select 	*, (select count(*) as "count"
 
 ```
 
-#### where절에서의 subquery
+#### WHERE절에서의 서브쿼리
 
-where절에서 subquery를 사용할 수 있습니다.
+WHERE절에서 서브쿼리를 사용할 수 있습니다.
 
 ```
 SELECT * 
-FROM xe_member as member 
-WHERE regdate = (SELECT MAX(regdate) as regdate 
-				FROM xe_documents as documents 
+FROM xe_member AS member 
+WHERE regdate = (SELECT MAX(regdate) AS regdate 
+				FROM xe_documents AS documents 
 				 WHERE documents.user_id = member.user_id) 
 ```
 
@@ -84,18 +83,18 @@ WHERE regdate = (SELECT MAX(regdate) as regdate
 </query> 
 ```
 
-#### from절에서의 subquery
+#### FROM절에서의 서브쿼리
 
-from절에서 subquery를 사용할 수 있습니다.
+FROM절에서 서브쿼리를 사용할 수 있습니다.
 
 서브쿼리를 `table` 요소로 사용하세요. `table` 요소에 `query` 속성을 'true'으로 지정하고, 서브쿼리를 넣으면 됩니다.
 
 ```
 SELECT m.member_srl, m.nickname, m.regdate, a.count 
 FROM 
-	(SELECT documents.member_srl as member_srl, count(*) as count 
-	 FROM xe_documents as documents 
-	 GROUP BY documents.member_srl) as a 
+	(SELECT documents.member_srl AS member_srl, count(*) AS count 
+	 FROM xe_documents AS documents 
+	 GROUP BY documents.member_srl) AS a 
 LEFT JOIN xe_members m on m.member_srl = a.member_srl
 ```
 
