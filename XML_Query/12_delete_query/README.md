@@ -1,8 +1,10 @@
 # XML Query
 
+<!-- index start -->
 TODO: 목차...
+<!-- index end -->
 
-## delete 쿼리
+## DELETE 쿼리
 ```
 <query id="deleteMember" action="delete">
     <tables>
@@ -17,4 +19,4 @@ TODO: 목차...
 DELETE FROM xe_member WHERE member_srl = :member_srl;
 ```
 
-delete 쿼리는 `query` 요소의 `action` 속성을 'delete'로 지정합니다.
+DELETE 쿼리는 `query` 요소의 `action` 속성을 'delete'로 지정합니다.

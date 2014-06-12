@@ -1,10 +1,12 @@
 # XML Query
 
+<!-- index start -->
 TODO: 목차...
+<!-- index end -->
 
 ## SELECT 쿼리 - WHERE절
 
-WHERE절은 `<condition>` 요소를 사용하여 작성할 수 있습니다. WHERE절은 SELECT, update, delete 쿼리에서 모두 동일하게 사용됩니다.
+WHERE절은 `<condition>` 요소를 사용하여 작성할 수 있습니다. WHERE절은 SELECT, UPDATE, DELETE 쿼리에서 모두 동일하게 사용됩니다.
 
 ```
 <query id="getMemberInfo" action="select">
@@ -163,5 +165,5 @@ SELECT * FROM member WHERE is_admin = ':is_admin' and (user_id = ':s_user_id' or
 ```
 
 
-> Note: group by에서 사용했던 `<group>` 요소와 동일한 명칭을 사용합니다. 주의하세요.
+> Note: GROUP BY에서 사용했던 `<group>` 요소와 동일한 명칭을 사용합니다. 주의하세요.
 

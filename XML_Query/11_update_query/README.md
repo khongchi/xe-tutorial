@@ -1,8 +1,10 @@
 # XML Query
 
+<!-- index start -->
 TODO: 목차...
+<!-- index end -->
 
-## update 쿼리
+## UPDATE 쿼리
 
 ```
 <query id="updateMember" action="update">
@@ -22,5 +24,5 @@ TODO: 목차...
 UPDATE xe_member AS member SET password = :password, user_name = :user_name WHERE member_srl = :member_srl;
 ```
 
-update 쿼리는 `query` 요소의 `action` 속성을 'update'로 지정합니다.
+UPDATE 쿼리는 `query` 요소의 `action` 속성을 'update'로 지정합니다.
 
