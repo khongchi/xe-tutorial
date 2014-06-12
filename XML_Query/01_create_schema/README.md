@@ -3,8 +3,8 @@
 <!-- index start -->
 
 - [Quick Start](/)
-- [테이블 생성하기](01_create_schema/)
-- [테이블 변경하기](02_alter_schema/)
+- [테이블 생성하기](01_create_schema)
+- [테이블 변경하기](../02_alter_schema)
 - [XML 쿼리 기본](03_xml_query/)
 - [SELECT 쿼리](04_select_query_basic/)
 - [SELECT 쿼리 - GROUP BY절](05_select_query_with_groupby/)
