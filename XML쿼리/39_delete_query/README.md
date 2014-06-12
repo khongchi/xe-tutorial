@@ -1,18 +1,21 @@
 
 # XE 데이터베이스
 
+TODO: 목차..
 
-- [Quick Start]()
-- [Schema]()
-	- [create schema]()
-	- [alter schema]()
-- [Query]()
-	- [SELECT 쿼리]()
-	- [GROUP BY절]()
-	- [WHERE절]()
-	- [ORDER BY절, LIMIT절 & 페이징 처리(navigation)]()
-	- [JOIN]()
-	- [Sub Query]()
-	- [INSERT 쿼리]()
-	- [UPDATE 쿼리]()
-	- [DELETE 쿼리]()
+## delete 쿼리
+```
+<query id="deleteMember" action="delete">
+    <tables>
+        <table name="member" />
+    </tables>
+    <conditions>
+        <condition operation="equal" column="member_srl" var="member_srl" notnull="notnull" filter="number" />
+    </conditions>
+</query>
+```
+```
+DELETE FROM xe_member WHERE member_srl = :member_srl;
+```
+
+delete 쿼리는 `query` 요소의 `action` 속성을 'delete'로 지정합니다.
